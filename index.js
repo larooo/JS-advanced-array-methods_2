@@ -69,14 +69,14 @@ console.log(stringsToNums(["4", "3", "9"]));
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
 
-// const firstLetterUpperCase = str => {
-//   let arrSplit = str.split(" ");
-//   return (arrSplitFirst = arrSplit
-//     .map(x => x[0].toUpperCase().concat()) // + x.slice(1)) // .concat(x[1], x[x.length - 1])
-//     .join(" "));
-// };
+const firstLetterUpperCase = str => {
+  let arrSplit = str.split(" ");
+  return (arrSplitFirst = arrSplit
+    .map(x => x[0].toUpperCase() + x.slice(1))
+    .join(" "));
+};
 
-// console.log(firstLetterUpperCase("the quick brown fox"));
+console.log(firstLetterUpperCase("the quick brown fox"));
 
 // Q9.implement - map
 // Write a function called `map` that takes in two arguments: an array and a function.`map` should apply the passed in function to every memeber of the array, and return a new array with the results.
